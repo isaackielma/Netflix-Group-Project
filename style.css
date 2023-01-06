@@ -1,84 +1,199 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 img {
-    width: 100%;
+  width: 100%;
 }
 body {
-    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
-    background-color: #000;
-    color: white;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+  background-color: #000;
+  color: white;
 }
 
+/* Khaled's Part */
 
+header {
+  width: 100%;
+  height: 100%;
+  display: inline;
+  inset: 0;
+  overflow: auto;
+  z-index: 200;
+}
+
+.concord-img-gradient {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 150;
+}
+
+.concord-img {
+  object-fit: cover;
+  z-index: 120;
+}
+
+.netflix-img {
+  display: flex;
+  contain: content;
+}
+
+.netflix-img,
+.concord-img-gradient {
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0,
+    transparent 60%,
+    rgba(0, 0, 0, 0.8)
+  );
+  z-index: 140;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+  padding: 26px 40px;
+  position: absolute;
+  width: 100%;
+  z-index: 500;
+}
+
+.netflix-logo {
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+svg {
+  fill: rgb(226, 2, 2);
+  width: 45%;
+}
+
+.sign-in {
+  cursor: pointer;
+  background: rgb(226, 2, 2);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.select-language-block {
+  align-content: center;
+  max-width: 100%;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  height: 100%;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+select {
+  align-content: center;
+  color: #fff;
+  background: transparent;
+  border: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.select-language-block::before {
+  color: #fff;
+  content: "\1F310";
+  position: absolute;
+  top: 2.3rem;
+}
+
+.select-language-block::after {
+  content: "⏷";
+  color: #fff;
+  position: absolute;
+  top: 2.3rem;
+  transform: translateX(-120%);
+}
+option {
+  background: rgb(80, 80, 80);
+}
+
+/* ---------------------------------------------------------- */
 
 section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 46px;
-    padding: 70px 35px;
-    align-items: center;
-    border-top: 8px solid #222;
-    text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 46px;
+  padding: 70px 35px;
+  align-items: center;
+  border-top: 8px solid #222;
+  text-align: center;
 }
-@media screen and (min-width:550px) {
-    section{
-        grid-template-columns: 1fr 1fr;
-        text-align: left;
-    }
-    
+@media screen and (min-width: 550px) {
+  section {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
 }
 
 section.last {
-    border-bottom: 8px solid #222;
+  border-bottom: 8px solid #222;
 }
 
 section div.texts h1 {
-    font-size: 1.625rem;
-    margin-bottom: 8px;
+  font-size: 1.625rem;
+  margin-bottom: 8px;
 }
 
-@media screen and (min-width:550px) {
-    section div.texts h1 {
-        font-size: 3.125rem;
-    }
-    
+@media screen and (min-width: 550px) {
+  section div.texts h1 {
+    font-size: 3.125rem;
+  }
 }
 
 section div.texts p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-@media screen and (min-width:550px) {
-    section div.texts p {
-        font-size: 1.625rem;
-    }
+@media screen and (min-width: 550px) {
+  section div.texts p {
+    font-size: 1.625rem;
+  }
 }
 .media {
-    position: relative;
+  position: relative;
 }
 
-
 section div.download {
-    border: 2px solid #666;
-    border-radius: 15px;
-    padding: 10px;
-    height: 95px;
-    display: grid;
-    text-align: center;
-    align-items: center;
-    position: absolute;
-    bottom: 20px;
-    width: 280px;
-    left: 50%;
-    margin-left: -140px;
-    background-color: #000;
-    gap: 15px;
-    grid-template-columns: max-content 1fr max-content;
+  border: 2px solid #666;
+  border-radius: 15px;
+  padding: 10px;
+  height: 95px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  width: 280px;
+  left: 50%;
+  margin-left: -140px;
+  background-color: #000;
+  gap: 15px;
+  grid-template-columns: max-content 1fr max-content;
 }
 
 section div.download img {
-    height: 75px;
-    width: auto;
+  height: 75px;
+  width: auto;
 }
