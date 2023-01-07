@@ -182,6 +182,9 @@ video {
     section.last .texts{
         grid-row: 1;
     } 
+    .kids div.texts {
+        order: -1;
+    }
 }
 @media screen and (min-width:950px) {
     section{
@@ -202,12 +205,6 @@ video {
     }
     .kids div.texts {
         order: 1;
-    }
-}
-
-@media screen and (max-width:950px) {
-    .kids div.texts {
-        order: -1;
     }
 }
 /* Media Queries Finished here */
