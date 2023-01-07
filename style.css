@@ -388,6 +388,7 @@ video {
 
   .register-block {
     margin-top: 150px;
+    contain: layout;
   }
 
   .register-block h1 {
