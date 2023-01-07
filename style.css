@@ -12,8 +12,6 @@ body {
     color: white;
 }
 
-
-
 section {
     display: grid;
     grid-template-columns: 1fr;
@@ -24,6 +22,7 @@ section {
     text-align: center;
     justify-items: center;
 }
+
 /* Mhmd: Edited Here */
 .texts {
     z-index: 3;
@@ -48,26 +47,46 @@ section div.texts h1 {
 
 
 section div.download {
-    border: 2px solid #666;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(63, 63, 63);
     border-radius: 15px;
-    padding: 10px;
-    height: 95px;
-    display: grid;
+    padding: 8px;
+    padding-left: 12px;
+    margin-left: 25px;
+    width: 85%;
     text-align: center;
     align-items: center;
-    position: absolute;
-    bottom: 20px;
-    width: 280px;
-    left: 50%;
-    margin-left: -140px;
     background-color: #000;
+    position: relative;
+    bottom: 50px;
     gap: 15px;
     grid-template-columns: max-content 1fr max-content;
 }
+.download-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Stranger {
+    min-width: 145px;
+    font-size: 14px;
+}
+
+.Downloading {
+   color: rgb(70, 128, 254);
+   font-size: 12px;
+   padding-right: 17px;
+}
 
 section div.download img {
-    height: 75px;
-    width: auto;
+    max-height: 50px;
+    max-width: 54px;
+}
+.cover{
+    max-height: 300px; 
+    min-width: 300px;
 }
 
 /* Mhmd: Added Here */
@@ -130,21 +149,21 @@ video {
 
 }
 
-@media screen and (max-width:550px) {
-    .media.s2 video {
-        left: -400px;
-    }
-}
-
 
 /* Combined all media queries to be more standarized according to standard screen sizes used by netflix web page*/
 @media screen and (max-width:550px) {
     section div.texts p {
-        font-size: 1.25rem;
+        font-size: 1.16rem;
+        font-weight: 270;
     }
 
     section div.texts h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        font-weight: 455;
+    }
+   
+    .media.s2 video {
+        left: -400px;
     }
 }
 @media screen and (max-width:949px) {
@@ -180,6 +199,15 @@ video {
     .animation-card .our-story-card-img-container {
         height: 100%;
         width: 70%;
+    }
+    .kids div.texts {
+        order: 1;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .kids div.texts {
+        order: -1;
     }
 }
 /* Media Queries Finished here */
